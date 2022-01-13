@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import EducationalExperience from './components/EducationalExperience';
+import GeneralInformation from './components/GeneralInformation';
+import PracticalExperience from './components/PracticalExperience';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          CV App!
-        </p>
-
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <GeneralInformation />
+        <EducationalExperience />
+        <PracticalExperience />
+      </div>
+    );
+  }
 }
-
 export default App;
