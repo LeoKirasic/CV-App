@@ -6,19 +6,19 @@ class PracticalExperience extends React.Component {
       <div className="practical-experience">
         <label>
           Company name:
-          <input type="text" />
+          <input id="company-name" type="text" />
         </label>
         <label>
           Title:
-          <input type="text" />
+          <input id="title" type="text" />
         </label>
         <label>
           Start Date:
-          <input type="month" />
+          <input id="start-month" type="month" />
         </label>
         <label>
           End Date:
-          <input type="month" />
+          <input id="end-month" type="month" />
         </label>
       </div>
     );

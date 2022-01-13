@@ -10,11 +10,11 @@ class GeneralInformation extends React.Component {
         </label>
         <label>
           Email:
-          <input type="email" name="" id="" />
+          <input type="email" name="" id="email" />
         </label>
         <label>
           Phone Number:
-          <input type="text" />
+          <input id="phone-mumber" type="text" />
         </label>
       </div>
     );

@@ -8,8 +8,14 @@ class EducationalExperience extends React.Component {
           School name:
           <input id="school-name" type="text" />
         </label>
-        <input id="title-of-study" type="text" />
-        <input id="date-of-study" type="text" />
+        <label>
+          Title Of Study:
+          <input id="title-of-study" type="text" />
+        </label>
+        <label>
+          Date Of Study
+          <input id="date-of-study" type="text" />
+        </label>
       </div>
     );
   }
