@@ -1,12 +1,19 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 class EducationalExperience extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
-      <div className="educational-experience">
+      <form className="educational-experience">
         <label>
           School name:
-          <input id="school-name" type="text" />
+          <input
+            id="school-name"
+            type="text"
+            onChange={(event) => this.props.onChange(event.target.value)}
+          />
         </label>
         <label>
           Title Of Study:
@@ -16,9 +23,14 @@ class EducationalExperience extends React.Component {
           Date Of Study
           <input id="date-of-study" type="text" />
         </label>
-      </div>
+        <input type="button" value="" />
+      </form>
     );
   }
 }
 
+EducationalExperience.propTypes = {
+  schoolName: PropTypes.string,
+  onChange: PropTypes.func,
+};
 export default EducationalExperience;
