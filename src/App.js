@@ -32,11 +32,17 @@ class App extends React.Component {
             this.setState({ titleOfStudy: value })
           }
           onDateOfStudyChange={(value) => this.setState({ dateOfStudy: value })}
+          onNameChange={(value) => this.setState({ name: value })}
+          onEmailChange={(value) => this.setState({ email: value })}
+          onPhoneNumberChange={(value) => this.setState({ phoneNumber: value })}
         />
         <OutputSection
           schoolName={this.state.schoolName}
           titleOfStudy={this.state.titleOfStudy}
           dateOfStudy={this.state.dateOfStudy}
+          name={this.state.name}
+          email={this.state.email}
+          phoneNumber={this.state.phoneNumber}
         />
       </div>
     );
@@ -47,5 +53,8 @@ App.propTypes = {
   onSchoolNameChange: PropTypes.func,
   onTitleOfStudyChange: PropTypes.func,
   onDateOfStudyChange: PropTypes.func,
+  onNameChange: PropTypes.func,
+  onEmailChange: PropTypes.func,
+  onPhoneNumberChange: PropTypes.func,
 };
 export default App;
