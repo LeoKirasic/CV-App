@@ -38,7 +38,6 @@ class EducationalExperience extends React.Component {
             }
           />
         </label>
-        <input type="button" value="" />
       </form>
     );
   }

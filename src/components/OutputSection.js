@@ -28,6 +28,16 @@ class OutputSection extends React.Component {
             Date Of Study: {this.props.dateOfStudy}
           </div>
         </div>
+        <div className="practical-experience">
+          PRACTICAL EXPERIENCE:
+          <div className="company-name">
+            Company name: {this.props.companyName}
+          </div>
+          <div className="title">Title: {this.props.title}</div>
+          <div className="start-date">Start Date: {this.props.startDate}</div>
+          <div className="end-date">End Date: {this.props.endDate}</div>
+          <div className="end-date">Tasks: {this.props.tasks}</div>
+        </div>
       </div>
     );
   }
@@ -40,6 +50,11 @@ OutputSection.propTypes = {
   name: PropTypes.string,
   email: PropTypes.string,
   phoneNumber: PropTypes.string,
+  companyName: PropTypes.string,
+  title: PropTypes.string,
+  startDate: PropTypes.string,
+  endDate: PropTypes.string,
+  tasks: PropTypes.string,
 };
 
 export default OutputSection;

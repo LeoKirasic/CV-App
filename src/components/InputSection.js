@@ -10,7 +10,6 @@ class InputSection extends React.Component {
   }
 
   render() {
-    console.log('input section props', this.props);
     return (
       <div id="input-container">
         <GeneralInformation
@@ -23,8 +22,13 @@ class InputSection extends React.Component {
           onTitleOfStudyChange={this.props.onTitleOfStudyChange}
           onDateOfStudyChange={this.props.onDateOfStudyChange}
         />
-        <PracticalExperience />
-        <button type="submit">Main button</button>
+        <PracticalExperience
+          onCompanyNameChange={this.props.onCompanyNameChange}
+          onTitleChange={this.props.onTitleChange}
+          onStartDateChange={this.props.onStartDateChange}
+          onEndDateChange={this.props.onEndDateChange}
+          onTasksChange={this.props.onTasksChange}
+        />
       </div>
     );
   }
@@ -36,5 +40,10 @@ InputSection.propTypes = {
   onNameChange: PropTypes.func,
   onEmailChange: PropTypes.func,
   onPhoneNumberChange: PropTypes.func,
+  onCompanyNameChange: PropTypes.func,
+  onTitleChange: PropTypes.func,
+  onStartDateChange: PropTypes.func,
+  onEndDateChange: PropTypes.func,
+  onTasksChange: PropTypes.func,
 };
 export default InputSection;
