@@ -43,7 +43,7 @@ class PracticalExperience extends React.Component {
         </label>
         <label>
           Tasks:
-          <input
+          <textarea
             id="tasks"
             type="text"
             onChange={(event) => this.props.onTasksChange(event.target.value)}
