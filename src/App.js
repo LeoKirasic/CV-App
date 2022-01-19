@@ -13,8 +13,8 @@ class App extends React.Component {
       email: '',
       phoneNumber: '',
       schoolName: 'School',
-      //   // titleOfStudy: '',
-      //   // dateOfStudy: '',
+      titleOfStudy: '',
+      dateOfStudy: '',
       //   // companyName: '',
       //   // title: '',
       //   // startDate: '',
@@ -26,20 +26,26 @@ class App extends React.Component {
     return (
       <div id="main-container">
         <InputSection
-          onChange={(value) => this.setState({ schoolName: value })}
+          onSchoolNameChange={(value) => this.setState({ schoolName: value })}
           schoolName={this.state.schoolName}
+          onTitleOfStudyChange={(value) =>
+            this.setState({ titleOfStudy: value })
+          }
+          onDateOfStudyChange={(value) => this.setState({ dateOfStudy: value })}
         />
-        <OutputSection schoolName={this.state.schoolName} />
+        <OutputSection
+          schoolName={this.state.schoolName}
+          titleOfStudy={this.state.titleOfStudy}
+          dateOfStudy={this.state.dateOfStudy}
+        />
       </div>
     );
   }
 }
 
 App.propTypes = {
-  name: PropTypes.string,
-  email: PropTypes.string,
-  phoneNumber: PropTypes.string,
-  SchoolName: PropTypes.string,
-  onChange: PropTypes.func,
+  onSchoolNameChange: PropTypes.func,
+  onTitleOfStudyChange: PropTypes.func,
+  onDateOfStudyChange: PropTypes.func,
 };
 export default App;

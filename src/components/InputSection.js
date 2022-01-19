@@ -15,8 +15,10 @@ class InputSection extends React.Component {
       <div id="input-container">
         <GeneralInformation />
         <EducationalExperience
-          onChange={this.props.onChange}
+          onSchoolNameChange={this.props.onSchoolNameChange}
           schoolName={this.props.schoolName}
+          onTitleOfStudyChange={this.props.onTitleOfStudyChange}
+          onDateOfStudyChange={this.props.onDateOfStudyChange}
         />
         <PracticalExperience />
         <button type="submit">Main button</button>
@@ -28,6 +30,8 @@ InputSection.propTypes = {
   schoolName: PropTypes.string,
   email: PropTypes.string,
   phoneNumber: PropTypes.string,
-  onChange: PropTypes.func,
+  onSchoolNameChange: PropTypes.func,
+  onTitleOfStudyChange: PropTypes.func,
+  onDateOfStudyChange: PropTypes.func,
 };
 export default InputSection;
