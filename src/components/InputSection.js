@@ -20,7 +20,8 @@ class InputSection extends React.Component {
         <EducationalExperience
           onSchoolNameChange={this.props.onSchoolNameChange}
           onTitleOfStudyChange={this.props.onTitleOfStudyChange}
-          onDateOfStudyChange={this.props.onDateOfStudyChange}
+          onStartDateOfStudyChange={this.props.onStartDateOfStudyChange}
+          onEndDateOfStudyChange={this.props.onEndDateOfStudyChange}
         />
         <PracticalExperience
           onCompanyNameChange={this.props.onCompanyNameChange}
@@ -36,7 +37,8 @@ class InputSection extends React.Component {
 InputSection.propTypes = {
   onSchoolNameChange: PropTypes.func,
   onTitleOfStudyChange: PropTypes.func,
-  onDateOfStudyChange: PropTypes.func,
+  onStartDateOfStudyChange: PropTypes.func,
+  onEndDateOfStudyChange: PropTypes.func,
   onNameChange: PropTypes.func,
   onEmailChange: PropTypes.func,
   onPhoneNumberChange: PropTypes.func,

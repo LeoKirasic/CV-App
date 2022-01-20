@@ -14,7 +14,9 @@ class App extends React.Component {
       phoneNumber: '',
       schoolName: '',
       titleOfStudy: '',
-      dateOfStudy: '',
+      startDateOfStudy: '',
+      endDateOfStudy: '',
+
       companyName: '',
       title: '',
       startDate: '',
@@ -32,7 +34,12 @@ class App extends React.Component {
           onTitleOfStudyChange={(value) =>
             this.setState({ titleOfStudy: value })
           }
-          onDateOfStudyChange={(value) => this.setState({ dateOfStudy: value })}
+          onStartDateOfStudyChange={(value) =>
+            this.setState({ startDateOfStudy: value })
+          }
+          onEndDateOfStudyChange={(value) =>
+            this.setState({ endDateOfStudy: value })
+          }
           onNameChange={(value) => this.setState({ name: value })}
           onEmailChange={(value) => this.setState({ email: value })}
           onPhoneNumberChange={(value) => this.setState({ phoneNumber: value })}
@@ -45,7 +52,8 @@ class App extends React.Component {
         <OutputSection
           schoolName={this.state.schoolName}
           titleOfStudy={this.state.titleOfStudy}
-          dateOfStudy={this.state.dateOfStudy}
+          startDateOfStudy={this.state.startDateOfStudy}
+          endDateOfStudy={this.state.endDateOfStudy}
           name={this.state.name}
           email={this.state.email}
           phoneNumber={this.state.phoneNumber}
@@ -63,7 +71,8 @@ class App extends React.Component {
 App.propTypes = {
   onSchoolNameChange: PropTypes.func,
   onTitleOfStudyChange: PropTypes.func,
-  onDateOfStudyChange: PropTypes.func,
+  onStartDateOfStudyChange: PropTypes.func,
+  onEndDateOfStudyChange: PropTypes.func,
   onNameChange: PropTypes.func,
   onEmailChange: PropTypes.func,
   onPhoneNumberChange: PropTypes.func,

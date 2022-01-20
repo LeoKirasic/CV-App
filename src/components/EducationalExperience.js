@@ -30,13 +30,23 @@ class EducationalExperience extends React.Component {
             }
           />
         </label>
-        <label className="date-of-study-label">
-          <div className="date-of-study-header">Date Of Study:</div>
+        <label className="start-date-of-study-label">
+          <div className="start-date-of-study-header">From:</div>
           <input
-            id="date-of-study"
+            id="start-date-of-study"
             type="date"
             onChange={(event) =>
-              this.props.onDateOfStudyChange(event.target.value)
+              this.props.onStartDateOfStudyChange(event.target.value)
+            }
+          />
+        </label>
+        <label className="end-date-of-study-label">
+          <div className="end-date-of-study-header">To:</div>
+          <input
+            id="end-date-of-study"
+            type="date"
+            onChange={(event) =>
+              this.props.onEndDateOfStudyChange(event.target.value)
             }
           />
         </label>
@@ -49,6 +59,7 @@ EducationalExperience.propTypes = {
   schoolName: PropTypes.string,
   onSchoolNameChange: PropTypes.func,
   onTitleOfStudyChange: PropTypes.func,
-  onDateOfStudyChange: PropTypes.func,
+  onStartDateOfStudyChange: PropTypes.func,
+  onEndDateOfStudyChange: PropTypes.func,
 };
 export default EducationalExperience;

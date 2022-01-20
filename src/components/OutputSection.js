@@ -25,7 +25,7 @@ class OutputSection extends React.Component {
             Title Of Study: {this.props.titleOfStudy}
           </div>
           <div className="date-of-study">
-            Date Of Study: {this.props.dateOfStudy}
+            From: {this.props.startDateOfStudy} To: {this.props.endDateOfStudy}
           </div>
         </div>
         <div className="practical-experience">
@@ -46,7 +46,8 @@ class OutputSection extends React.Component {
 OutputSection.propTypes = {
   schoolName: PropTypes.string,
   titleOfStudy: PropTypes.string,
-  dateOfStudy: PropTypes.string,
+  startDateOfStudy: PropTypes.string,
+  endDateOfStudy: PropTypes.string,
   name: PropTypes.string,
   email: PropTypes.string,
   phoneNumber: PropTypes.string,
