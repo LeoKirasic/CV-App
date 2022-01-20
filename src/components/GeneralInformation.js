@@ -8,26 +8,26 @@ class GeneralInformation extends React.Component {
 
   render() {
     return (
-      <form>
-        GENERAL INFORMATION:
-        <label>
-          Name:
+      <form className="general-information-form">
+        <div className="general-information-header">GENERAL INFORMATION</div>
+        <label className="name-label">
+          <div className="name-header">Name:</div>
           <input
             type="text"
             id="name"
             onChange={(event) => this.props.onNameChange(event.target.value)}
           />
         </label>
-        <label>
-          Email:
+        <label className="email-label">
+          <div className="email-heading">Email:</div>
           <input
             type="text"
             id="name"
             onChange={(event) => this.props.onEmailChange(event.target.value)}
           />
         </label>
-        <label>
-          Phone Number:
+        <label className="phone-number-label">
+          <div className="phone-number-heading">Phone Number:</div>
           <input
             type="text"
             id="name"
@@ -36,7 +36,6 @@ class GeneralInformation extends React.Component {
             }
           />
         </label>
-        <div></div>
       </form>
     );
   }
