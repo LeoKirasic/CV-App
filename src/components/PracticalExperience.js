@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 class PracticalExperience extends React.Component {
   render() {
     return (
-      <form className="practical-experience">
+      <form className="practical-experience-form">
+        <header className="practical-experience-header">
+          PRACTICAL EXPERIENCE
+        </header>
         <label className="company-name-label">
           <div className="company-name-header">Company Name:</div>
           <input
