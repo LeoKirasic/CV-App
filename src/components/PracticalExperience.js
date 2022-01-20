@@ -5,8 +5,8 @@ class PracticalExperience extends React.Component {
   render() {
     return (
       <form className="practical-experience">
-        <label>
-          Company name:
+        <label className="company-name-label">
+          <div className="company-name-header">Company Name:</div>
           <input
             id="company-name"
             type="text"
@@ -15,16 +15,16 @@ class PracticalExperience extends React.Component {
             }
           />
         </label>
-        <label>
-          Title:
+        <label className="title-label">
+          <div className="title-header">Title:</div>
           <input
             id="title"
             type="text"
             onChange={(event) => this.props.onTitleChange(event.target.value)}
           />
         </label>
-        <label>
-          Start Date:
+        <label className="start-date-label">
+          <div className="start-date-header">Start Date:</div>
           <input
             id="start-date"
             type="text"
@@ -33,16 +33,16 @@ class PracticalExperience extends React.Component {
             }
           />
         </label>
-        <label>
-          End Date:
+        <label className="end-date-label">
+          <div className="end-date-header">End Date:</div>
           <input
             id="end-date"
             type="text"
             onChange={(event) => this.props.onEndDateChange(event.target.value)}
           />
         </label>
-        <label>
-          Tasks:
+        <label className="tasks-label">
+          <div className="tasks-header">Tasks:</div>
           <textarea
             id="tasks"
             type="text"
