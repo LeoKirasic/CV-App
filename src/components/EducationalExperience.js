@@ -7,9 +7,11 @@ class EducationalExperience extends React.Component {
   render() {
     return (
       <form className="educational-experience">
-        EDUCATIONAL EXPERIENCE:
-        <label>
-          School name:
+        <div className="educational-experience-header">
+          EDUCATIONAL EXPERIENCE
+        </div>
+        <label className="school-name-label">
+          <div className="school-name-header">School name:</div>
           <input
             id="school-name"
             type="text"
@@ -18,8 +20,8 @@ class EducationalExperience extends React.Component {
             }
           />
         </label>
-        <label>
-          Title Of Study:
+        <label className="title-of-study-label">
+          <div className="title-of-study-header">Title of study:</div>
           <input
             id="title-of-study"
             type="text"
@@ -28,8 +30,8 @@ class EducationalExperience extends React.Component {
             }
           />
         </label>
-        <label>
-          Date Of Study:
+        <label className="date-of-study-label">
+          <div className="date-of-study-header">Date Of Study:</div>
           <input
             id="date-of-study"
             type="date"
