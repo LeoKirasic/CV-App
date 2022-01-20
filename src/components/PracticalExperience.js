@@ -30,7 +30,7 @@ class PracticalExperience extends React.Component {
           <div className="start-date-header">Start Date:</div>
           <input
             id="start-date"
-            type="text"
+            type="date"
             onChange={(event) =>
               this.props.onStartDateChange(event.target.value)
             }
@@ -40,7 +40,7 @@ class PracticalExperience extends React.Component {
           <div className="end-date-header">End Date:</div>
           <input
             id="end-date"
-            type="text"
+            type="date"
             onChange={(event) => this.props.onEndDateChange(event.target.value)}
           />
         </label>
