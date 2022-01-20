@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import InputSection from './components/InputSection';
 import OutputSection from './components/OutputSection';
+import Header from './components/Header';
 import PropTypes from 'prop-types';
 
 class App extends React.Component {
@@ -12,6 +13,7 @@ class App extends React.Component {
       name: '',
       email: '',
       phoneNumber: '',
+
       schoolName: '',
       titleOfStudy: '',
       startDateOfStudy: '',
@@ -28,6 +30,7 @@ class App extends React.Component {
   render() {
     return (
       <div id="main-container">
+        <Header />
         <InputSection
           onSchoolNameChange={(value) => this.setState({ schoolName: value })}
           schoolName={this.state.schoolName}
