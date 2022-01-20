@@ -36,7 +36,7 @@ class OutputSection extends React.Component {
           <div className="title">Title: {this.props.title}</div>
           <div className="start-date">Start Date: {this.props.startDate}</div>
           <div className="end-date">End Date: {this.props.endDate}</div>
-          <div className="end-date">Tasks: {this.props.tasks}</div>
+          <div className="tasks">Tasks: {this.props.tasks}</div>
         </div>
       </div>
     );
