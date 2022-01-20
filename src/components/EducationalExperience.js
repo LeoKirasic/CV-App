@@ -4,47 +4,55 @@ class EducationalExperience extends React.Component {
   constructor(props) {
     super(props);
   }
+  onFocus(event) {
+    event.currentTarget.type = 'date';
+  }
   render() {
     return (
       <form className="educational-experience">
-        <div className="educational-experience-header">
+        <div className="educational-experience-header section-header">
           EDUCATIONAL EXPERIENCE
         </div>
         <label className="school-name-label">
-          <div className="school-name-header">School name:</div>
           <input
             id="school-name"
             type="text"
+            placeholder="School Name"
             onChange={(event) =>
               this.props.onSchoolNameChange(event.target.value)
             }
           />
-        </label>
+        </label>{' '}
+        <br />
         <label className="title-of-study-label">
-          <div className="title-of-study-header">Title of study:</div>
           <input
             id="title-of-study"
             type="text"
+            placeholder="Title"
             onChange={(event) =>
               this.props.onTitleOfStudyChange(event.target.value)
             }
           />
-        </label>
+        </label>{' '}
+        <br />
         <label className="start-date-of-study-label">
-          <div className="start-date-of-study-header">From:</div>
           <input
             id="start-date-of-study"
-            type="date"
+            type="text"
+            onFocus={this.onFocus}
+            placeholder="Starting Date"
             onChange={(event) =>
               this.props.onStartDateOfStudyChange(event.target.value)
             }
           />
-        </label>
+        </label>{' '}
+        <br />
         <label className="end-date-of-study-label">
-          <div className="end-date-of-study-header">To:</div>
           <input
             id="end-date-of-study"
-            type="date"
+            type="text"
+            onFocus={this.onFocus}
+            placeholder="Ending Date"
             onChange={(event) =>
               this.props.onEndDateOfStudyChange(event.target.value)
             }

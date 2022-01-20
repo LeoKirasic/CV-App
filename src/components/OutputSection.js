@@ -9,7 +9,7 @@ class OutputSection extends React.Component {
     return (
       <div id="output-section">
         <div className="general-information">
-          GENERAL INFORMATION:
+          GENERAL INFORMATION
           <div className="name">Name: {this.props.name}</div>
           <div className="email">Email: {this.props.email}</div>
           <div className="phone-number">
@@ -17,7 +17,7 @@ class OutputSection extends React.Component {
           </div>
         </div>
         <div className="educational-experience">
-          EDUCATIONAL EXPERIENCE:
+          EDUCATIONAL EXPERIENCE
           <div className="school-name">
             School Name: {this.props.schoolName}
           </div>
@@ -29,7 +29,7 @@ class OutputSection extends React.Component {
           </div>
         </div>
         <div className="practical-experience">
-          PRACTICAL EXPERIENCE:
+          PRACTICAL EXPERIENCE
           <div className="company-name">
             Company name: {this.props.companyName}
           </div>

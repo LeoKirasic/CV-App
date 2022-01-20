@@ -9,28 +9,32 @@ class GeneralInformation extends React.Component {
   render() {
     return (
       <form className="general-information-form">
-        <div className="general-information-header">GENERAL INFORMATION</div>
+        <div className="general-information-header section-header">
+          GENERAL INFORMATION
+        </div>
         <label className="name-label">
-          <div className="name-header">Name:</div>
           <input
             type="text"
             id="name"
+            placeholder="Name"
             onChange={(event) => this.props.onNameChange(event.target.value)}
           />
-        </label>
+        </label>{' '}
+        <br />
         <label className="email-label">
-          <div className="email-heading">Email:</div>
           <input
             type="text"
-            id="name"
+            id="email"
+            placeholder="Email"
             onChange={(event) => this.props.onEmailChange(event.target.value)}
           />
-        </label>
+        </label>{' '}
+        <br />
         <label className="phone-number-label">
-          <div className="phone-number-heading">Phone Number:</div>
           <input
             type="text"
-            id="name"
+            id="phone-number"
+            placeholder="Phone Number"
             onChange={(event) =>
               this.props.onPhoneNumberChange(event.target.value)
             }

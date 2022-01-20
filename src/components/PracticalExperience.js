@@ -2,53 +2,62 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class PracticalExperience extends React.Component {
+  onFocus(event) {
+    event.currentTarget.type = 'date';
+  }
   render() {
     return (
       <form className="practical-experience-form">
-        <header className="practical-experience-header">
+        <header className="practical-experience-header section-header">
           PRACTICAL EXPERIENCE
         </header>
         <label className="company-name-label">
-          <div className="company-name-header">Company Name:</div>
           <input
             id="company-name"
             type="text"
+            placeholder="Company Name"
             onChange={(event) =>
               this.props.onCompanyNameChange(event.target.value)
             }
           />
-        </label>
+        </label>{' '}
+        <br />
         <label className="title-label">
-          <div className="title-header">Title:</div>
           <input
             id="title"
             type="text"
+            placeholder="Title"
             onChange={(event) => this.props.onTitleChange(event.target.value)}
           />
-        </label>
+        </label>{' '}
+        <br />
         <label className="start-date-label">
-          <div className="start-date-header">Start Date:</div>
           <input
             id="start-date"
-            type="date"
+            type="text"
+            placeholder="Start Date"
+            onFocus={this.onFocus}
             onChange={(event) =>
               this.props.onStartDateChange(event.target.value)
             }
           />
-        </label>
+        </label>{' '}
+        <br />
         <label className="end-date-label">
-          <div className="end-date-header">End Date:</div>
           <input
             id="end-date"
-            type="date"
+            type="text"
+            placeholder="End Date"
+            onFocus={this.onFocus}
             onChange={(event) => this.props.onEndDateChange(event.target.value)}
           />
-        </label>
+        </label>{' '}
+        <br />
         <label className="tasks-label">
-          <div className="tasks-header">Tasks:</div>
           <textarea
             id="tasks"
             type="text"
+            placeholder="Tasks"
             onChange={(event) => this.props.onTasksChange(event.target.value)}
           />
         </label>
