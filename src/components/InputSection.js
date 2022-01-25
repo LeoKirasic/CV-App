@@ -4,35 +4,29 @@ import GeneralInformation from './GeneralInformation';
 import PracticalExperience from './PracticalExperience';
 import PropTypes from 'prop-types';
 
-class InputSection extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <div id="input-container">
-        <GeneralInformation
-          onNameChange={this.props.onNameChange}
-          onEmailChange={this.props.onEmailChange}
-          onPhoneNumberChange={this.props.onPhoneNumberChange}
-        />
-        <EducationalExperience
-          onSchoolNameChange={this.props.onSchoolNameChange}
-          onTitleOfStudyChange={this.props.onTitleOfStudyChange}
-          onStartDateOfStudyChange={this.props.onStartDateOfStudyChange}
-          onEndDateOfStudyChange={this.props.onEndDateOfStudyChange}
-        />
-        <PracticalExperience
-          onCompanyNameChange={this.props.onCompanyNameChange}
-          onTitleChange={this.props.onTitleChange}
-          onStartDateChange={this.props.onStartDateChange}
-          onEndDateChange={this.props.onEndDateChange}
-          onTasksChange={this.props.onTasksChange}
-        />
-      </div>
-    );
-  }
+function InputSection(props) {
+  return (
+    <div id="input-container">
+      <GeneralInformation
+        onNameChange={props.onNameChange}
+        onEmailChange={props.onEmailChange}
+        onPhoneNumberChange={props.onPhoneNumberChange}
+      />
+      <EducationalExperience
+        onSchoolNameChange={props.onSchoolNameChange}
+        onTitleOfStudyChange={props.onTitleOfStudyChange}
+        onStartDateOfStudyChange={props.onStartDateOfStudyChange}
+        onEndDateOfStudyChange={props.onEndDateOfStudyChange}
+      />
+      <PracticalExperience
+        onCompanyNameChange={props.onCompanyNameChange}
+        onTitleChange={props.onTitleChange}
+        onStartDateChange={props.onStartDateChange}
+        onEndDateChange={props.onEndDateChange}
+        onTasksChange={props.onTasksChange}
+      />
+    </div>
+  );
 }
 InputSection.propTypes = {
   onSchoolNameChange: PropTypes.func,
